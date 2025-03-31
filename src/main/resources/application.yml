@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: oauth2-bff-demo
+
+  session:
+    # initialize schema provided by spring-session-jdbc
+    # for production, it's probably smarter to copy the schema and apply it via flyway.
+    jdbc:
+      initialize-schema: always
+      schema: classpath:org/springframework/session/jdbc/schema-postgresql.sql
+
+  datasource:
+    # aligned with values from postgresql container in docker-compose.yml
+    url: jdbc:postgresql://localhost:5432/oauth2-bff-demo
+    username: postgres
+    password: admin
+
+  # oauth2 client config as in https://spring.io/guides/tutorials/spring-boot-oauth2#github-application-config
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: <your-client-id>
+            clientSecret: <your-client-secret>
