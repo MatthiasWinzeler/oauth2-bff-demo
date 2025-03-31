@@ -16,7 +16,7 @@ This demo leverages the following components:
 
 ## How to run
 
-1. Follow [this guide](https://spring.io/guides/tutorials/spring-boot-oauth2#github-application-config) to create a Github OAuth2 Client and save `clientId` and `clientSecret` to [application.yml](src/main/resources/application.html).
+1. Follow [this guide](https://spring.io/guides/tutorials/spring-boot-oauth2#github-application-config) to create a Github OAuth2 Client and save `clientId` and `clientSecret` to [application.yml](src/main/resources/application.yml).
 2. Start the PostgreSQL container via `docker-compose up`
 3. Start the BFF via `./mvn spring-boot:run`
 4. Open `http://localhost:8080/get`
