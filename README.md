@@ -4,8 +4,8 @@ This project demonstrates how Spring framework projects can be wired up to imple
 component as laid out in  [IETF Draft for OAuth 2.0 for Browser-Based Applications](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-browser-based-apps#name-backend-for-frontend-bff).
 
 In this architecture, the BFF acts as a central gateway to all backend services and holds user sessions.
-If none is found, it initiates the Authorization Code flow with PKCE to the OAuth2 Authorization server, allowing the BFF to obtain tokens which are attached to the HTTP session. 
-Once authenticated, the application sends requests to the resource server through the BFF, which attaches the user's access token and returns the response to the frontend.
+If no session is found, it initiates the Authorization Code flow with PKCE to the OAuth2 Authorization server, allowing the BFF to obtain tokens which are attached to the HTTP session. 
+Once authenticated, the frontend application sends requests to the resource server through the BFF, which attaches the user's access token and returns the response to the frontend.
 
 This demo leverages the following components:
 
